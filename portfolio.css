@@ -1,0 +1,297 @@
+:root {
+    --bg: #14161f;
+    --text: #ece9e2;
+    --muted: #b4b6c2;
+    --accent: #f2b84b;
+    --line: #34374a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    line-height: 1.7;
+}
+
+/* Main Container */
+.page {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 30px;
+}
+
+/* Profile Header */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    padding: 30px 0 65px;
+}
+
+.start {
+    order: 1;
+}
+
+.study {
+    color: var(--accent);
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+h1 {
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    line-height: 1.1;
+}
+
+.place {
+    color: var(--muted);
+    margin-top: 12px;
+}
+
+.hi {
+    order: 2;
+    flex-shrink: 0;
+}
+
+.hi img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    border-radius: 50%;
+}
+
+/* Common Section Style */
+section {
+    padding: 35px 10px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+}
+
+h2 {
+    color: var(--accent);
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+section > p {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Education */
+.timeline {
+    display: inline-block;
+    border-left: 3px solid var(--accent);
+    padding: 5px 0 5px 18px;
+    text-align: left;
+    margin: 5px 0;
+}
+
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.timeline p {
+    color: var(--muted);
+    margin-top: 4px;
+}
+
+/* Skills */
+.tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+}
+
+.tags li {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 7px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.2s ease;
+}
+
+.tags li:hover {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+/* Contact Buttons */
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 5px 0 28px;
+}
+
+.links a {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 22px;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    transition: 0.25s ease;
+}
+
+.links a:hover,
+.links a:focus-visible {
+    background: transparent;
+    color: var(--accent);
+}
+
+/* Footer */
+footer {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* Tablet Screens */
+@media screen and (max-width: 768px) {
+    .page {
+        padding: 30px 24px;
+    }
+
+    .header {
+        gap: 24px;
+        padding: 25px 0 45px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .hi img {
+        width: 130px;
+        height: 130px;
+    }
+
+    section {
+        padding: 30px 5px;
+    }
+}
+
+/* Mobile Screens */
+@media screen and (max-width: 480px) {
+    .page {
+        padding: 20px 16px;
+    }
+
+    .header {
+        gap: 16px;
+        padding: 20px 0 35px;
+    }
+
+    .study {
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .place {
+        font-size: 13px;
+        margin-top: 8px;
+    }
+
+    .hi img {
+        width: 100px;
+        height: 100px;
+    }
+
+    section {
+        padding: 25px 0;
+    }
+
+    h2 {
+        font-size: 19px;
+        margin-bottom: 15px;
+    }
+
+    section > p {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    .timeline p {
+        font-size: 13px;
+    }
+
+    .tags {
+        gap: 8px;
+    }
+
+    .tags li {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .links {
+        gap: 8px;
+        margin-bottom: 22px;
+    }
+
+    .links a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Very Small Mobile Screens */
+@media screen and (max-width: 350px) {
+    .page {
+        padding: 16px 12px;
+    }
+
+    .header {
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    .hi img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .tags li {
+        font-size: 13px;
+        padding: 5px 9px;
+    }
+}
